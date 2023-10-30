@@ -19,8 +19,14 @@ const AddTaskPage = ({ onAddTaskHandler }) => {
 
   const addTaskHandler = (event) => {
     event.preventDefault();
+
+    // Default task description since the field is optional
+  //  const defaultDescription = formValues.description ?? { description : formValues.title}
+
     onAddTaskHandler(formValues);
-    dispatch(addTask(formValues));
+    dispatch(addTask({
+      formValues
+    }));
     setFormValues({ title: "", description: "" });
     navigate("/");
   };
@@ -51,12 +57,12 @@ const AddTaskPage = ({ onAddTaskHandler }) => {
         value={formValues.description}
         id="description"
         rows="3"
-        placeholder="Enter description"
+        placeholder="Enter description (Optional)"
         onChange={handleOnInputChange}
         maxLength="100"
       ></textarea>
       <button
-       disabled={formValues.title === '' && formValues.description === ''}
+       disabled={formValues.title === ''}
         className="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 my-2 pr-3 py-2 shadow-sm"
         type="submit"
       >
