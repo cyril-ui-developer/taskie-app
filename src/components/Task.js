@@ -23,7 +23,7 @@ const Task = ({ task, onDeleteTask, onToggleTaskStatus }) => (
                 task.completed ? "ml-4 text-sm  line-through" : "ml-4 text-sm "
               }`}
             >
-              {task.description}
+              {task.description || task.title}
             </span>
           </label>
         </div>

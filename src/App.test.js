@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Parent and Child Components Communication - Task Manager App/i);
+  const linkElement = screen.getByText(/Taskie/i);
   expect(linkElement).toBeInTheDocument();
 });
