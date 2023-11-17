@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with React and Redux Unit Testing: Taskie App
 https://dev.to/raaynaldo/redux-toolkit-setup-tutorial-5fjf
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
